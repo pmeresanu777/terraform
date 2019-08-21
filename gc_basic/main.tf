@@ -1,9 +1,9 @@
-variable "project" {default = "esd-general-dev"}
-variable "region" {default = "us-west1"}
+variable "project" {default = "AutomicDemo"}
+variable "region" {default = "us-east1"}
 variable "subnetwork" {default = "test-network-sub"}
 variable "image" {default = "ubuntu-1604-xenial-v20190212"}
 variable "credentials" {}
-variable "infrastructure_name" {default = "demo-infrastructurex"}
+variable "infrastructure_name" {default = "Dev"}
 variable "zone" {default = "us-east1-c"}
 
 variable "num_nodes" {
