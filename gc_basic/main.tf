@@ -28,7 +28,7 @@ provider "google" {
 resource "google_compute_instance" "default" {
   count        = "${var.num_nodes}"
   project      = "${var.project}"
-  zone         = "us-west1-b"
+  zone         = "us-east1-c"
   name         = "${var.infrastructure_name}-${count.index + 1}-${local.id}"
   machine_type = "f1-micro"
   
