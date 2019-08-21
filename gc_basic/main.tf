@@ -1,4 +1,4 @@
-variable "project" {default = "demo-esd-automation"}
+variable "project" {default = "demos-esd-automation"}
 variable "region" {default = "us-east1"}
 variable "subnetwork" {default = "default"}
 variable "image" {default = "ubuntu-1604-xenial-v20190816"}
