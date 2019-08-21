@@ -3,6 +3,7 @@ variable "region" {default = "us-central1"}
 variable "subnetwork" {default = "test-network-sub"}
 variable "image" {default = "ubuntu-1604-xenial-v20190212"}
 variable "infrastructure_name" {default = "Dev"}
+variable = "credentials"{}
 variable "zone" {default = "us-central1-a"}
 
 variable "num_nodes" {
