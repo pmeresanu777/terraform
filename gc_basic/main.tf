@@ -57,7 +57,7 @@ resource "google_compute_instance" "default" {
 		type        = "ssh"
 		user        = "automic"
 		private_key = "${file("${var.private_key_file}")}"
-		password    = "${var.ubuntu_password}"
+		
 	}
   }
 
@@ -69,7 +69,7 @@ resource "google_compute_instance" "default" {
 		type        = "ssh"
 		user        = "automic"
 		private_key = "${file("${var.private_key_file}")}"
-		password    = "${var.ubuntu_password}"
+		
 	}
   }
 
@@ -81,7 +81,7 @@ resource "google_compute_instance" "default" {
 		type        = "ssh"
 		user        = "automic"
 		private_key = "${file("${var.private_key_file}")}"
-		password    = "${var.ubuntu_password}"
+		
 	}
   }	
 	
