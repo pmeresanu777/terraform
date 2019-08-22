@@ -14,7 +14,7 @@ provider "cda" {
 resource "cda_environment" "firstEnvironment" {
   name  = "PaulsEnv"
   folder    = "TIXCHANGE"
-  custom_type  = "Generic"
+  type  = "Generic"
   dynamic_properties = {}
   custom_properties = {}
   deployment_targets = []
