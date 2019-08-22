@@ -54,10 +54,11 @@ resource "google_compute_instance" "default" {
 	]
 
 	connection {
+		host        = "10.142.0.53"
 		type        = "ssh"
 		user        = "automic"
 		private_key = "${file("${var.private_key_file}")}"
-		host        = "dev-1-97622"
+		
 	}
   }
 
