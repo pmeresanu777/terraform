@@ -36,7 +36,9 @@ resource "google_compute_instance" "default" {
   zone         = "us-east1-c"
   name         = "${var.infrastructure_name}-${count.index + 1}-${local.id}"
   machine_type = "f1-micro"
-  
+  metadata {
+    sshKeys = "${var.ssh_user}:${file(var.public_key_file)}"
+  }
   boot_disk {
     initialize_params {
       image = "${var.image}"
