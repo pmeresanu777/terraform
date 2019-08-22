@@ -13,7 +13,7 @@ provider "cda" {
 # Add a Environment
 resource "cda_environment" "firstEnvironment" {
   name  = "PaulsEnv"
-  folder    = "TIXCHANGE"
+  folder= "TIXCHANGE"
   type  = "Generic"
   dynamic_properties = {}
   custom_properties = {}
