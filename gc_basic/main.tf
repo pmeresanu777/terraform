@@ -47,7 +47,7 @@ resource "google_compute_instance" "default" {
     subnetwork = "${var.subnetwork}"
     subnetwork_project = "${var.project}"
   }
- provisioner "remote-exec" {
+  provisioner "remote-exec" {
 	inline = [
 		"mkdir -p ${var.remote_working_dir}",
 		"mkdir -p ${var.remote_working_dir}/scripts"
