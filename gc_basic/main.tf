@@ -5,9 +5,7 @@ variable "image" {default = "centos-7-v20190813"}
 variable "infrastructure_name" {default = "dev"}
 variable "credentials" {}
 variable "zone" {default = "us-east1-c"}
-variable "cda_server" {default = "https://cda.automic-demo.com/bond/"}
-variable "cda_user" {default = "100/ARA/ARA"}
-variable "cda_password" {}
+
 
 
 variable "num_nodes" {
