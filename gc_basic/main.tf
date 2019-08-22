@@ -47,4 +47,42 @@ resource "google_compute_instance" "default" {
     subnetwork = "${var.subnetwork}"
     subnetwork_project = "${var.project}"
   }
+ provisioner "remote-exec" {
+	inline = [
+		"mkdir -p ${var.remote_working_dir}",
+		"mkdir -p ${var.remote_working_dir}/scripts"
+	]
+
+	connection {
+		type        = "ssh"
+		user        = "automic"
+		private_key = "${file("${var.private_key_file}")}"
+		password    = "${var.ubuntu_password}"
+	}
+  }
+
+  provisioner "file" {
+	source      = "artifacts"
+	destination = "${var.remote_working_dir}"
+
+	connection {
+		type        = "ssh"
+		user        = "automic"
+		private_key = "${file("${var.private_key_file}")}"
+		password    = "${var.ubuntu_password}"
+	}
+  }
+
+  provisioner "file" {
+	source      = "scripts/remote/agent_sm_installation.sh"
+	destination = "${var.remote_working_dir}/scripts/agent_sm_installation.sh"
+
+	connection {
+		type        = "ssh"
+		user        = "automic"
+		private_key = "${file("${var.private_key_file}")}"
+		password    = "${var.ubuntu_password}"
+	}
+  }	
+	
 }
