@@ -9,6 +9,11 @@ variable "local_scripts_location" {
 variable "private_key_file" {
 	default = "./id_rsa"
 }
-
+variable "public_key_file" {
+	default = "./id_rsa"
+}
+variable "ssh_user" {
+	default = "user"
+}
 
 
